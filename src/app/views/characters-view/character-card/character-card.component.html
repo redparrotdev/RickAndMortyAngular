@@ -1,0 +1,35 @@
+<div class="card-container" [class.card-container-small]="small">
+    <div class="card-image" [class.card-image-small]="small">
+        <img src="{{ character.image }}" alt="img">
+    </div>
+    <div class="card-content">
+        <div class="section" [class.section-small]="small">
+            <a href="/characters/{{ character.id }}">
+                <h3>{{ character.name }}</h3>
+            </a>
+            <span class="text-gray">
+                Status - {{ character.status }}
+                <span class="status-icon" [style.background]="getStatusIconColor()"></span>
+            </span>
+        </div>
+        @if (!small) {
+            <div class="section">
+                <span class="text-gray">Species:</span>
+                <p>{{ character.species }}</p>
+            </div>
+            <div class="section">
+                <span class="text-gray">Type:</span>
+                <p>{{ getCharacterType() }}</p>
+            </div>
+            <div class="section">
+                <span class="text-gray">Origin:</span>
+                @if (character.origin.name == 'unknown') {
+                    <p>{{ character.origin.name }}</p>
+                }
+                @else {
+                    <a [href]="character.origin.url">{{ character.origin.name }}</a>
+                }
+            </div>
+        }
+    </div>
+</div>

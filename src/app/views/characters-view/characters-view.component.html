@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 style="color: black;">Rick and Morty characters list</h1>
+    <app-paginator
+    (pageChanged)="onPageChanged($event)"
+    [length]="info.count"
+    [pageIndex]="page - 1">
+
+    </app-paginator>
+    <mat-grid-list cols="2" rowHeight="2:1">
+        @for (char of characters; track char.id) {
+            <mat-grid-tile>
+                <app-character-card [character]="char" class="character-card"></app-character-card>
+            </mat-grid-tile>
+        }
+    </mat-grid-list>
+
+    <app-paginator
+    (pageChanged)="onPageChanged($event)"
+    [length]="info.count"
+    [pageIndex]="page - 1">
+    </app-paginator>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 style="color: black;">Rick and Morty locations list</h1>
+
+    <mat-grid-list cols="2" rowHeight="4:1">
+        @for (loc of locations; track loc.id) {
+            <mat-grid-tile>
+                <div class="card">
+                    <div class="top">
+                        <h2><a href="javascript: void(0)">
+                            {{ loc.name }}
+                        </a></h2>
+                    </div>
+                    <div class="bottom">
+                        <p>Type: <span>
+                            {{ loc.type }}
+                        </span></p>
+                        <p>Dimension: <span>
+                            {{ loc.dimension }}
+                        </span></p>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        }
+    </mat-grid-list>
+</div>

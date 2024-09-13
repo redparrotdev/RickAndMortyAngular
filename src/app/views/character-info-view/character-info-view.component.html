@@ -1,0 +1,52 @@
+@if (character != undefined) {
+    <div class="container">
+        <div class="info-container">
+            <div class="image-container">
+                <img src="{{ character.image }}" alt="">
+                <div class="side">
+                    <div class="half-size">
+                        {{ character.origin.name }}
+                    </div>
+                    <div class="half-size">
+                        {{ character.location.name }}
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <h2>{{ character.name }}</h2>
+                <table>
+                    <tr>
+                        <td>Status:</td>
+                        <td>{{ character.status }}</td>
+                    </tr>
+                    <tr>
+                        <td>Species:</td>
+                        <td>{{ character.species }}</td>
+                    </tr>
+                    <tr>
+                        <td>Type:</td>
+                        <td>{{ character.type }}</td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td>{{ character.gender }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="episodes-container">
+            <h3>Episodes:</h3>
+            @for (ep of episodes; track ep.id) {
+                <p>
+                    {{ ep.episode }} :
+                    <a href="/episodes/{{ ep.id }}">
+                        {{ ep.name }}
+                    </a>
+                </p>
+            }
+        </div>
+    </div>
+}
+@else {
+    <p style="color: black;">No character found!</p>
+}

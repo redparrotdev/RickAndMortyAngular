@@ -1,0 +1,7 @@
+<mat-list role="list">
+    @for (item of navItems; track item.content) {
+        <mat-list-item role="listitem">
+            <a href="{{ item.url }}">{{ item.content }}</a>
+        </mat-list-item>
+    }
+</mat-list>

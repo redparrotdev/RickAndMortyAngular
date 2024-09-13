@@ -1,0 +1,22 @@
+.container {
+    padding: calc(0.5%);
+    color: black;
+}
+
+.card {
+    margin: 0.5rem;
+    width: calc(100%);
+    border: 2px solid gray;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card a:link, a:visited {
+    color: brown;
+}
+
+.card a:hover {
+    color: orange;
+}

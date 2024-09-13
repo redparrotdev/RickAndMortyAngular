@@ -1,0 +1,36 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+
+.info-container {
+    flex: 3 1 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.image-container img {
+    flex: 3 1 0%;
+    max-width: 300px;
+}
+
+.image-container .side {
+    flex: 3 1 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.half-size {
+    height: 50%;
+}
+
+.episodes-container {
+    flex: 3 1 0%;
+}

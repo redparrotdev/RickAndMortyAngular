@@ -1,0 +1,12 @@
+<div class="paginator-container">
+    <mat-paginator #paginator
+    class="paginator"
+    (page)="handlePageEvent($event)"
+    [pageSize]="pageSize"
+    [length]="length"
+    [pageIndex]="pageIndex"
+    [showFirstLastButtons]="true"
+    [hidePageSize]="true">
+
+    </mat-paginator>
+</div>
